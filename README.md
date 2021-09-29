@@ -16,7 +16,6 @@ Supported types:
 |float  |float  |
 |double  |double  |
 |string  |string  |
-|string  |string  |
 |bool  |bool  |
 
 
