@@ -28,10 +28,11 @@ Supported types:
 Generator.exe -s [protocol_source_file_path] -o [output_folder_path]
 ```
 # Generated data structures
-### [PtInt32List.cs](./output/PtInt32List.cs)
-### [PtRoomList.cs](./output/PtRoomList.cs)
-### [PtRoom.cs](./output/PtRoom.cs)
-### [PtRoomPlayer.cs](./output/PtRoomPlayer.cs)
+## Example generated from a [protocol_source](./protocol_source.json)
+* [PtInt32List.cs](./output/PtInt32List.cs)
+* [PtRoomList.cs](./output/PtRoomList.cs)
+* [PtRoom.cs](./output/PtRoom.cs)
+* [PtRoomPlayer.cs](./output/PtRoomPlayer.cs)
 
 # How to use protocol structures?
 ## Array format For example PtInt32List:
