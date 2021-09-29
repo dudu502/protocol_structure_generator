@@ -1,7 +1,7 @@
 # Protocol Structures Serialization and Deserialization
 
 # Introduce
-* [ByteBuffer.cs](.Generator/Protocol/Net/ByteBuffer.cs) : The byte buffer class to process binary datas.
+* [ByteBuffer.cs](./Generator/Protocol/Net/ByteBuffer.cs) : The byte buffer class to process binary datas.
 
 Create a [protocol_source.json](./protocol_source.json) file to edit protocol structures
 
