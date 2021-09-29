@@ -1,6 +1,6 @@
 # Protocol_Source_File
-Create a json file to edit protocol structures
-[protocol_source](./protocol_source.json)
+Create a [protocol_source.json](./protocol_source.json) file to edit protocol structures
+
 
 Supported types:
 
@@ -28,7 +28,7 @@ Supported types:
 Generator.exe -s [protocol_source_file_path] -o [output_folder_path]
 ```
 # Generated data structures
-## Example generated from a [protocol_source](./protocol_source.json)
+## Example generated from a [protocol_source.json](./protocol_source.json)
 * [PtInt32List.cs](./output/PtInt32List.cs)
 * [PtRoomList.cs](./output/PtRoomList.cs)
 * [PtRoom.cs](./output/PtRoom.cs)
