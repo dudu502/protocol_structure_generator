@@ -2,11 +2,10 @@
 
 # Introduce
 * [ByteBuffer.cs](./Generator/Protocol/Net/ByteBuffer.cs) : The byte buffer class to process binary datas.
-
-Create a [protocol_source.json](./protocol_source.json) file to edit protocol structures
+* [protocol_source.json](./protocol_source.json)  : Protocol structures configuration file.
+Create a [protocol_source.json](./protocol_source.json) file to edit protocol structures.
 
 Supported types:
-
 
 | Protocol | C#  |
 | :----:  | :----: |
