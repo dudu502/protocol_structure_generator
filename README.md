@@ -1,4 +1,4 @@
-# Protocol_Source_File
+# Protocol Structures Serialization and Deserialization
 Create a [protocol_source.json](./protocol_source.json) file to edit protocol structures
 
 
@@ -46,8 +46,6 @@ File.WriteAllBytes(Path.Combine(Environment.CurrentDirectory, "int32list.bin"),b
 //0107 0000 0000 0000 0001 0000 0002 0000
 //0003 0000 0004 0000 0005 0000 0006 0000
 //00 
-
-
 PtInt32List newInt32List = PtInt32List.Read( File.ReadAllBytes(Path.Combine(Environment.CurrentDirectory, "int32list.bin")));
 Console.WriteLine(string.Join(" ", newInt32List.Elements)); // 0 1 2 3 4 5 6
 ```
