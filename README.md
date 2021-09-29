@@ -37,7 +37,7 @@ pm> install-package newtonsoft.json
 Generator.exe -s [protocol_source_file_path] -o [output_folder_path]
 ```
 # Generated data structures
-## Example generated from a [protocol_source.json](./protocol_source.json)
+## Examples generated from a [protocol_source.json](./protocol_source.json)
 * [PtInt32List.cs](./output/PtInt32List.cs)
 * [PtRoomList.cs](./output/PtRoomList.cs)
 * [PtRoom.cs](./output/PtRoom.cs)
