@@ -1,5 +1,6 @@
 # Protocol_Source_File
 Create a json file to edit protocol structures
+[protocol_source](./protocol_source.json)
 
 Supported types:
 
@@ -21,121 +22,13 @@ Supported types:
 
 
 
-
-[protocol_source](./protocol_source.json)
-
-```json
-{	
-    "using_ns":["Protocol.Net"],
-    "ns":"Development.Net.Pt",
-    "pts": [								
-			{
-				"className": "PtInt32List",
-				"fields": [
-					{
-						"type": "int32",
-						"name": "Elements",
-						"isArray": 1
-					}
-				]
-			},			
-			{
-				"className": "PtRoomList",
-				"fields": [
-					{
-						"type": "PtRoom",
-						"name": "Rooms",
-						"isArray": 1
-					}
-				]
-			},
-			{
-				"className": "PtRoom",
-				"fields": [
-					{
-						"type": "uint32",
-						"name": "RoomId"
-					},
-					{
-						"type": "byte",
-						"name": "Status"
-					},
-					{
-						"type": "uint32",
-						"name": "MapId"
-					},
-					{
-						"type": "string",
-						"name": "RoomOwnerUserId"
-					},
-					{
-						"type": "byte",
-						"name": "MaxPlayerCount"
-					},
-					{
-						"type": "PtRoomPlayer",
-						"name": "Players",
-						"isArray": 1
-					}
-				]
-			},
-			{
-				"className": "PtRoomPlayer",
-				"fields": [
-					{
-						"type": "uint32",
-						"name": "EntityId"
-					},
-					{
-						"type": "byte",
-						"name": "TeamId"
-					},
-					{
-						"type": "string",
-						"name": "NickName"
-					},
-					{
-						"type": "int64",
-						"name": "UserId"
-					},
-					{
-						"type": "uint64",
-						"name": "UUID"
-					},
-					{
-						"type": "string",
-						"name": "Password"
-					},
-					{
-						"type": "byte",
-						"name": "Status"
-					},
-					{
-						"type": "bool",
-						"name": "Enable"
-					},
-					{
-						"type": "float",
-						"name": "height"
-					}
-					,
-					{
-						"type":"double",
-						"name":"power"
-					}
-				]
-			}
-    ]
-}
-```
-
 # How to generate protocol structures?
 
 ```shell
 Generator.exe -s [protocol_source_file_path] -o [output_folder_path]
 ```
 # Generated data structures
-### PtInt32List.cs
+### [PtInt32List.cs](./output/PtInt32List.cs)
 ```csharp
 //Creation time:2021/9/29 11:29:46
 using System;
