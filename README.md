@@ -34,7 +34,8 @@ Generator.exe -s [protocol_source_file_path] -o [output_folder_path]
 ### [PtRoomPlayer.cs](./output/PtRoomPlayer.cs)
 
 # How to use protocol structures?
-Array format For example PtInt32List:
+## Array format For example PtInt32List:
+
 ```csharp
 PtInt32List int32List = new PtInt32List();
 int32List.SetElements(new List<int>() { 0, 1, 2, 3, 4, 5, 6 });
@@ -50,7 +51,7 @@ PtInt32List newInt32List = PtInt32List.Read( File.ReadAllBytes(Path.Combine(Envi
 Console.WriteLine(string.Join(" ", newInt32List.Elements)); // 0 1 2 3 4 5 6
 ```
 
-Nested structure for exmaple  PtRoomList:
+## Nested structure for exmaple  PtRoomList:
 
 ```csharp
 PtRoomList ptRoomList = new PtRoomList();
