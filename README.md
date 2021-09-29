@@ -26,6 +26,13 @@ Supported types:
 
 # How to generate protocol structures?
 
+* Install Newtonsoft.Json dll to project and Build Generator.sln
+
+```shell
+pm> install-package newtonsoft.json
+```
+
+* Use Generator.exe in CMD to generator protocol structures. 
 ```shell
 Generator.exe -s [protocol_source_file_path] -o [output_folder_path]
 ```
