@@ -64,8 +64,9 @@ public class [CLASSNAME]
             CollectionData data;
             try
             {
-                //data = LitJson.JsonMapper.ToObject<CollectionData>(result);
-                data = Newtonsoft.Json.JsonConvert.DeserializeObject<CollectionData>(result);
+                var deserializer = new YamlDotNet.Serialization.Deserializer();
+                //data = Newtonsoft.Json.JsonConvert.DeserializeObject<CollectionData>(result);
+                data = deserializer.Deserialize<CollectionData>(result);
                 Console.WriteLine(data.ToString());
             }
             catch (Exception ex)

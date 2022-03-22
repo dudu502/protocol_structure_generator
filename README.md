@@ -2,8 +2,8 @@
 
 # Introduce
 * [ByteBuffer.cs](./Generator/Protocol/Net/ByteBuffer.cs) : The byte buffer class to process binary datas.
-* [protocol_source.json](./protocol_source.json)  : Protocol structures configuration file.
-Create a [protocol_source.json](./protocol_source.json) file to edit protocol structures.
+* [protocols.yaml](./protocols.yaml)  : Protocol structures configuration file.
+Create a [protocols.yaml](./protocols.yaml) file to edit protocol structures.
 
 Supported types:
 
@@ -26,18 +26,12 @@ Supported types:
 
 # How to generate protocol structures?
 
-* Install Newtonsoft.Json dll to project and Build Generator.sln
-
-```shell
-pm> install-package newtonsoft.json
-```
-
 * Use Generator.exe in CMD to generator protocol structures. 
 ```shell
-Generator.exe -s [protocol_source_file_path] -o [output_folder_path]
+Generator.exe -s [protocol_source_file_path.yaml] -o [output_folder_path]
 ```
 # Generated data structures
-## Examples generated from a [protocol_source.json](./protocol_source.json)
+## Examples generated from a [protocols.yaml](./protocols.yaml)
 * [PtInt32List.cs](./output/PtInt32List.cs)
 * [PtRoomList.cs](./output/PtRoomList.cs)
 * [PtRoom.cs](./output/PtRoom.cs)
