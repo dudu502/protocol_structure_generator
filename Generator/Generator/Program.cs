@@ -53,11 +53,9 @@ public class [CLASSNAME]
             string srcPath = args[1 + Array.IndexOf(args, "-s")];
             string genPath = args[1 + Array.IndexOf(args, "-o")];
 
-            GenCode(srcPath, genPath);
-            Console.ReadKey();
-
+            Task.WaitAll( GenCode(srcPath, genPath));
         }
-        static async void GenCode(string srcPath, string genPath)
+        static async Task GenCode(string srcPath, string genPath)
         {
             var result = await ReadFile(srcPath);
             Console.WriteLine(result);
@@ -65,7 +63,6 @@ public class [CLASSNAME]
             try
             {
                 var deserializer = new YamlDotNet.Serialization.Deserializer();
-                //data = Newtonsoft.Json.JsonConvert.DeserializeObject<CollectionData>(result);
                 data = deserializer.Deserialize<CollectionData>(result);
                 Console.WriteLine(data.ToString());
             }
@@ -99,29 +96,24 @@ public class [CLASSNAME]
                 fileContent = fileContent.Replace("[HASFIELDS]", hasFields);
                 fileContent = fileContent.Replace("[WRITE_FIELDS]", pt.ToWriteString());
                 fileContent = fileContent.Replace("[READ_FIELDS]", pt.ToReadString());
-                //await WriteFile(genPath+ "\\" + pt.className + ".cs",fileContent);
                 await Task.Run(() =>
                 {
                     File.WriteAllText(genPath + "\\" + pt.className + ".cs", fileContent);
-                    Console.WriteLine(" File writing is completed " + genPath + "\\" + pt.className);
+                    Console.WriteLine("[Completed] " + genPath + "\\" + pt.className);
                 });
-
-
             }
-
             Console.WriteLine("Auto Gen Pt Complete.");
         }
 
         static async Task<string> ReadFile(string file)
         {
             string result = "";
-
-            Console.WriteLine(" File reading is stating");
+ 
             using (StreamReader reader = new StreamReader(file))
             {
                 result = await reader.ReadToEndAsync();
             }
-            Console.WriteLine(" File reading is completed");
+ 
             return result;
         }
 
@@ -203,7 +195,7 @@ public class [CLASSNAME]
                 {
                     return "uint64";
                 }
-                throw new Exception("结构体最大字段数64.");
+                throw new Exception("Too Large.");
             }
             public string ToReadString()
             {
