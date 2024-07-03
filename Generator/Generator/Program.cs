@@ -317,6 +317,7 @@ public class [CLASSNAME]
                 { "string","string"},
                 { "float","float"},
                 { "double","double"},
+                { "bytes","byte[]"}
             };
         }
 
