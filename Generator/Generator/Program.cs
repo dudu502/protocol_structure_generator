@@ -81,7 +81,7 @@ public class [CLASSNAME]
                 fileContent = fileContent.Replace("[CLASSNAME]", pt.className);
                 fileContent = fileContent.Replace("[NAMESPACE]", data.ns);
                 var markTypeName = pt.GetMarkTypeName();
-                var fields = $"public {Field.FieldTypeValue[markTypeName]} __tag__ " + "{ get;private set;}\n\n\t";
+                var fields = $"private {Field.FieldTypeValue[markTypeName]} __tag__;" + "\n\n\t";
                 var setter = "";
                 var hasFields = "";
 
